@@ -32,10 +32,15 @@ export const reducer=(state,action)=>{
             }
 
             return {...curElem}
-           })
+           }).filter((cur)=>cur.quantity !== 0)
           
           
         return{...state,items:Decre}
+      }
+      if(action.type==="Clear_Cart")
+      {
+    return  {...state, items:[]};
+
       }
       if(action.type==="CHANGE_VALUE")
       {

@@ -7,8 +7,8 @@ return(
     <>
     
     <div className="items-info">
-        <div className="product-img">
-          <img src={img}/>
+        <div className="product-img" >
+          <img src={img} alt="Product Ofunt"/>
         </div>
 
         <div className="title">

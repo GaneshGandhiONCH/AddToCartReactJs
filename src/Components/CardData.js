@@ -7,7 +7,7 @@ import {CardContext} from './card';
 
 
 function CardData(){
-  const {items,TotalItems,TotalAmount}= useContext(CardContext)
+  const {items,TotalItems,TotalAmount,Clear}= useContext(CardContext)
     return(
          <section className="main-cart-section">
     <div className="cart-icon">
@@ -38,7 +38,7 @@ function CardData(){
           Cart Total : <span>{TotalAmount}$</span>
         </h3>
         <button>checkout</button>
-        <button className="clear-cart" >
+        <button className="clear-cart"   onClick={()=>Clear()}>
           Clear Cart
         </button>
       </div>

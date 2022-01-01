@@ -19,6 +19,9 @@ const  RemoveItem =(id)=>{
     payload:id,
   });
 };
+const Clear=()=>{
+   dispatch({type:"Clear_Cart"});
+}
 const Increment=(id)=>{
 return dispatch({
   type:"Increment",
@@ -42,7 +45,7 @@ useEffect(()=>
 
     return(
       
-      <CardContext.Provider value={{... state,RemoveItem,Increment,Decrement}}  >
+      <CardContext.Provider value={{...state,RemoveItem,Increment,Decrement,Clear}}  >
         <CardData/>
       </CardContext.Provider>
     
